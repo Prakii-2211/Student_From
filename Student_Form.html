@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Student_Form.css">
+    <title>Student Form</title>
+</head>
+
+<body>
+    <div id="form-container">
+        <h2 id="title">STUDENT FORM</h2>
+        <label>Name <input id="name" type="text"></label>
+        <label>Age <input id="age" type="number"></label>
+        <label id>Gender</label>
+        <div id="gender">
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+        <label>Course <select id="course">
+                <option>C#</option>
+                <option>Java</option>
+                <option>Python</option>
+                <option>Ruby</option>
+                <option>Go</option>
+            </select></label>
+
+        <label>E-Mail <input id="mail" type="email"></label>
+        <br>
+        <button onclick='saveStudent()' class='save-btn'>Save</button>
+    </div>
+    <table id="userform">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>
+                    <div id="gender">
+                        <input type="radio" name="gender" value="Male"> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Course </th>
+                <td><select id="course">
+                        <option>C#</option>
+                        <option>Java</option>
+                        <option>Python</option>
+                        <option>Ruby</option>
+                        <option>Go</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>E-Mail</th>
+                <td><input id="mail" type="email">
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" style="text-align:center;"> <button onclick='saveStudent()'
+                        class='save-btn'>Save</button></td>
+            </tr>
+        </tfoot>
+    </table>
+    <table id="studentsData">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Course</th>
+                <th>E - Mail</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <td>Prakash</td>
+            <td>25</td>
+            <td>Male</td>
+            <td>C#</td>
+            <td>prakashramesh2211@gmail.com</td>
+            <td><button class="delete-btn" onclick="deleteRow(event)">Delete</button></td>
+        </tbody>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+<script src="Student_Form.js">
+
+</script>
+
+</html>
